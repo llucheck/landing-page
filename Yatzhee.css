@@ -1,0 +1,15 @@
+body {
+  background-color: #40BCD8;
+}
+h2 {
+  color: #F39237;
+  text-align: center;
+  text-size: 150%;
+}
+p{
+  color: #D63230;
+  text-align: center;
+}
+input{
+  text-align: right;
+}
