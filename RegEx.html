@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Reg Expression Validator</title>
+<meta charset="utf-8">
+<style>
+h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+<h2>Regular Expression Validator</h2>
+<p>Put your regular expression into the regular expression box without the forward slashes</p>
+<p>Then put your test phrase into the Test Phrase and click the button to test it</p>
+
+Regular Expression: <input id="regEx" type="text" value="1" size="20"><br>
+Test Phrase: <input id="testPh" type="text" value="1" size="20"><br>
+<button type="button" onclick="ValidateRegExp()">Validate Phrase</button><br><br>
+
+Results:<input id="regResults" type="text" value="n/a" size="5"><br>
+
+<script>
+  function ValidateRegExp(){
+    const regex = RegExp(document.getElementById("regEx").value);
+    const str = document.getElementById("testPh").value;
+    document.getElementById("regResults").value = regex.test(str);
+    }
+</script>
+</body>
+
+</html>
